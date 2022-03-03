@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="616.0" prefWidth="976.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controllers.ControllerInterface">
+   <children>
+      <VBox prefHeight="616.0" prefWidth="198.0" style="-fx-background-color: #090303;">
+         <children>
+            <ImageView fitHeight="188.0" fitWidth="207.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/logo-white.png" />
+               </image>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </ImageView>
+            <VBox prefHeight="428.0" prefWidth="198.0">
+               <children>
+                  <Button fx:id="mainMenuButton" mnemonicParsing="false" onAction="#switchButton" prefHeight="44.0" prefWidth="198.0" styleClass="button-client" stylesheets="@../application.css" text="Dashboard" textFill="WHITE">
+                     <font>
+                        <Font name="Segoe UI Bold" size="15.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="22.0" fitWidth="42.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../img/25694.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <padding>
+                        <Insets left="-80.0" />
+                     </padding>
+                  </Button>
+                  <Button id="dashboard" fx:id="carteMenuButton" mnemonicParsing="false" onAction="#switchButton" prefHeight="44.0" prefWidth="198.0" styleClass="button-client" stylesheets="@../application.css" text="Cartes" textFill="WHITE">
+                     <font>
+                        <Font name="Segoe UI Bold" size="15.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="39.0" fitWidth="39.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../img/96765972-credit-card-icon-on-transparent-background-.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <padding>
+                        <Insets left="-110.0" />
+                     </padding>
+                     <VBox.margin>
+                        <Insets top="2.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Button id="dashboard" fx:id="payButton" mnemonicParsing="false" onAction="#switchButton" prefHeight="44.0" prefWidth="198.0" styleClass="button-client" stylesheets="@../application.css" text="Payements" textFill="WHITE">
+                     <font>
+                        <Font name="Segoe UI Bold" size="15.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="25.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../img/215-2154839_transparent-payment-icon-png.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <padding>
+                        <Insets left="-80.0" />
+                     </padding>
+                     <VBox.margin>
+                        <Insets top="2.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Button fx:id="settingsButton" mnemonicParsing="false" onAction="#switchButton" prefHeight="44.0" prefWidth="198.0" styleClass="button-client" stylesheets="@../application.css" text="Paramétres" textFill="WHITE">
+                     <font>
+                        <Font name="Segoe UI Bold" size="15.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="28.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../img/parameter-icon-png-and-vector-for-free-download-pngtree-parameter-png-512_512.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <padding>
+                        <Insets left="-80.0" />
+                     </padding>
+                     <VBox.margin>
+                        <Insets top="2.0" />
+                     </VBox.margin>
+                  </Button>
+               </children>
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+            </VBox>
+         </children>
+      </VBox>
+      <AnchorPane fx:id="mainPane" layoutX="199.0" prefHeight="616.0" prefWidth="776.0" AnchorPane.leftAnchor="199.0" AnchorPane.rightAnchor="1.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <ImageView fitHeight="38.0" fitWidth="73.0" layoutY="28.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../img/Home_Black.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="72.0" layoutY="38.0" style="-fx-text-fill: black;" text="Dashboard">
+               <font>
+                  <Font name="Segoe UI Bold" size="23.0" />
+               </font>
+            </Label>
+            <AnchorPane layoutX="25.0" layoutY="88.0" prefHeight="210.0" prefWidth="727.0" style="-fx-background-color: white; -fx-background-radius: 10;">
+               <children>
+                  <Label layoutX="22.0" layoutY="14.0" prefHeight="28.0" prefWidth="88.0" text="Mes Cartes">
+                     <font>
+                        <Font name="Segoe UI Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <ImageView fx:id="imageCarte1" fitHeight="188.0" fitWidth="345.0" layoutY="22.0" pickOnBounds="true" preserveRatio="true" />
+                  <ImageView fx:id="imageCarte2" fitHeight="188.0" fitWidth="345.0" layoutX="300.0" layoutY="22.0" pickOnBounds="true" preserveRatio="true" />
+                  <Label fx:id="numCarte1" layoutX="72.0" layoutY="125.0" prefHeight="17.0" prefWidth="138.0">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="nomClient1" layoutX="72.0" layoutY="160.0" prefHeight="17.0" prefWidth="118.0">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="numCarte2" layoutX="365.0" layoutY="125.0" prefHeight="17.0" prefWidth="138.0" textFill="#da7b7b">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="nomClient2" layoutX="365.0" layoutY="160.0" prefHeight="17.0" prefWidth="118.0" textFill="#c37070">
+                     <font>
+                        <Font name="System Bold" size="13.0" />
+                     </font>
+                  </Label>
+               </children>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </AnchorPane>
+            <AnchorPane layoutX="14.0" layoutY="340.0" prefHeight="262.0" prefWidth="356.0" style="-fx-background-color: white; -fx-background-radius: 10;">
+               <effect>
+                  <DropShadow />
+               </effect>
+               <children>
+                  <Label layoutX="23.0" layoutY="14.0" text="N°Compte :">
+                     <font>
+                        <Font name="Segoe UI Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="numCompteLabel" layoutX="107.0" layoutY="13.0" prefHeight="17.0" prefWidth="163.0" textFill="#4dacff">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label layoutX="23.0" layoutY="36.0" text="Solde :">
+                     <font>
+                        <Font name="Segoe UI Bold" size="14.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="soldeLabel" layoutX="97.0" layoutY="35.0" prefHeight="21.0" prefWidth="108.0" textFill="#03bf38">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+                  <TableView fx:id="tableTransaction" layoutX="6.0" layoutY="56.0" prefHeight="200.0" prefWidth="345.0">
+                    <columns>
+                      <TableColumn fx:id="columnNom" minWidth="67.0" prefWidth="115.0" text="Nom" />
+                      <TableColumn fx:id="columnNum" minWidth="67.0" prefWidth="115.0" text="Numéro Compte" />
+                        <TableColumn fx:id="columnMontant" prefWidth="115.0" text="Montant" />
+                    </columns>
+                  </TableView>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutX="406.0" layoutY="340.0" prefHeight="262.0" prefWidth="356.0" style="-fx-background-color: white; -fx-background-radius: 10;">
+               <effect>
+                  <DropShadow />
+               </effect>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

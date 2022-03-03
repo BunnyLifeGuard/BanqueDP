@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="mainPane" prefHeight="616.0" prefWidth="776.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controllers.ControllerDashboard">
+   <children>
+      <ImageView fitHeight="38.0" fitWidth="73.0" layoutY="28.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../img/Home_Black.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="72.0" layoutY="38.0" style="-fx-text-fill: black;" text="Dashboard">
+         <font>
+            <Font name="Segoe UI Bold" size="23.0" />
+         </font>
+      </Label>
+      <AnchorPane layoutX="25.0" layoutY="88.0" prefHeight="210.0" prefWidth="727.0" style="-fx-background-color: white; -fx-background-radius: 10;">
+         <children>
+            <Label layoutX="22.0" layoutY="14.0" prefHeight="28.0" prefWidth="88.0" text="Mes Cartes">
+               <font>
+                  <Font name="Segoe UI Bold" size="14.0" />
+               </font>
+            </Label>
+            <ImageView fx:id="imageCarte1" fitHeight="188.0" fitWidth="345.0" layoutY="22.0" pickOnBounds="true" preserveRatio="true" />
+            <ImageView fx:id="imageCarte2" fitHeight="188.0" fitWidth="345.0" layoutX="300.0" layoutY="22.0" pickOnBounds="true" preserveRatio="true" />
+            <Label fx:id="numCarte1" layoutX="72.0" layoutY="125.0" prefHeight="17.0" prefWidth="138.0">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+            <Label fx:id="nomClient1" layoutX="72.0" layoutY="160.0" prefHeight="17.0" prefWidth="118.0">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+            <Label fx:id="numCarte2" layoutX="365.0" layoutY="125.0" prefHeight="17.0" prefWidth="138.0" textFill="#da7b7b">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+            <Label fx:id="nomClient2" layoutX="365.0" layoutY="160.0" prefHeight="17.0" prefWidth="118.0" textFill="#c37070">
+               <font>
+                  <Font name="System Bold" size="13.0" />
+               </font>
+            </Label>
+         </children>
+         <effect>
+            <DropShadow />
+         </effect>
+      </AnchorPane>
+      <AnchorPane layoutX="14.0" layoutY="340.0" prefHeight="262.0" prefWidth="356.0" style="-fx-background-color: white; -fx-background-radius: 10;">
+         <effect>
+            <DropShadow />
+         </effect>
+         <children>
+            <Label layoutX="23.0" layoutY="14.0" text="N°Compte :">
+               <font>
+                  <Font name="Segoe UI Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="numCompteLabel" layoutX="107.0" layoutY="13.0" prefHeight="17.0" prefWidth="163.0" textFill="#4dacff">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="23.0" layoutY="36.0" text="Solde :">
+               <font>
+                  <Font name="Segoe UI Bold" size="14.0" />
+               </font>
+            </Label>
+            <Label fx:id="soldeLabel" layoutX="97.0" layoutY="35.0" prefHeight="21.0" prefWidth="108.0" textFill="#03bf38">
+               <font>
+                  <Font name="System Bold" size="15.0" />
+               </font>
+            </Label>
+            <TableView fx:id="tableTransaction" layoutX="6.0" layoutY="56.0" prefHeight="200.0" prefWidth="345.0">
+               <columns>
+                  <TableColumn fx:id="columnNom" minWidth="67.0" prefWidth="115.0" text="Nom" />
+                  <TableColumn fx:id="columnNum" minWidth="67.0" prefWidth="115.0" text="Numéro Compte" />
+                  <TableColumn fx:id="columnMontant" prefWidth="115.0" text="Montant" />
+               </columns>
+            </TableView>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="406.0" layoutY="340.0" prefHeight="262.0" prefWidth="356.0" style="-fx-background-color: white; -fx-background-radius: 10;">
+         <effect>
+            <DropShadow />
+         </effect>
+      </AnchorPane>
+   </children>
+</AnchorPane>

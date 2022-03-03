@@ -1,0 +1,113 @@
+/* JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property */
+
+.Identifiant {
+    -fx-border-style: none;
+	-fx-border-radius: 50%;
+	-fx-border-color: #3B3C3C;
+	-fx-text-box-border: transparent;
+	-fx-faint-focus-color: transparent;
+	-fx-focus-color:black;	
+	-fx-font-size: 14px;
+	
+}
+
+.Identifiant:focused {
+	-fx-focus-color: transparent;
+	-fx-faint-focus-color: transparent;
+	-fx-text-box-border: transparent;
+	
+}
+
+
+.button {
+	-fx-border-style:none;
+	-fx-border-radius: 50%;
+	-fx-background-radius: 15px;
+	-fx-border-color:black;
+	-fx-background-color: black;
+	-fx-text-box-border: transparent;
+	-fx-faint-focus-color: transparent;
+	-fx-text-fill: white;
+	-fx-font-weight: bold;
+}
+
+.button:hover {
+	-fx-background-color:#333333 ;
+	-fx-font-weight: bold;
+	-fx-font-size: 13px;
+	-fx-cursor: hand ;
+	
+}
+
+.radio-button .radio {
+    -fx-border-width: 1px;
+    -fx-border-color: #000;
+    -fx-background-color: white;
+    -fx-background-image: null;
+    -fx-border-radius: 10px;
+    -fx-padding: 1px;
+}
+.radio-button .radio:selected {
+    -fx-background-color: white;
+    -fx-background-image: null;
+}
+.radio-button -radio:armed {
+    -fx-background-color: white;
+    -fx-background-image: null;
+}
+.radio-button -radio:determinate {
+    -fx-background-color: white;
+    -fx-background-image: null;
+}
+.radio-button -radio:indeterminate {
+    -fx-background-color: white;
+    -fx-background-image: null;
+}
+.radio-button .dot {
+    -fx-background-radius: 10px;
+    -fx-padding: 6px;
+}
+
+#fermer {
+	-fx-background-color: white;
+	-fx-border-color: transparent;
+	-fx-text-fill: black;
+	-fx-font-size: 25px;
+	-fx-font-family:Segoe UI;
+}
+
+#fermer:hover {
+	-fx-background-color: white;
+	-fx-border-color: transparent;
+	-fx-text-fill: #333333;
+	-fx-font-size: 25px;
+	-fx-font-family:Segoe UI;
+}
+
+.button-client{
+	-fx-border-radius: none;
+	-fx-font-family: Segoe UI;
+	-fx-font-size: 15;
+	-fx-font-weight: bold;
+	-fx-border-color: none;
+	-fx-background-color:  #0E0D0D;
+	-fx-text-fill: white
+}
+
+.button-client:hover {
+	-fx-background-color:#232323;
+	-fx-cursor: hand ;
+	-fx-font-family: Segoe UI;
+	-fx-font-size: 15;
+	-fx-font-weight: bold;
+	
+}
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="578.0" prefWidth="769.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.Controllers.ControllerDemandeFonds">
+   <children>
+      <AnchorPane layoutX="25.0" layoutY="14.0" prefHeight="64.0" prefWidth="720.0" style="-fx-background-color: white; -fx-background-radius: 5;">
+         <children>
+            <FontAwesomeIcon glyphName="MONEY" layoutX="28.0" layoutY="46.0" size="3em" />
+            <Label layoutX="72.0" layoutY="15.0" prefHeight="44.0" prefWidth="237.0" style="-fx-text-fill: black;" text="Demande des fonds">
+               <font>
+                  <Font name="Segoe UI Bold" size="23.0" />
+               </font>
+            </Label>
+         </children>
+         <effect>
+            <DropShadow />
+         </effect>
+      </AnchorPane>
+      <Label layoutX="68.0" layoutY="492.0" prefHeight="44.0" prefWidth="633.0" text="IMPORTANT:  Votre demande sera rejeté automatiquement si votre fond actuel est supérieur de 200 000 DHS" textFill="#f51111">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <Label layoutX="73.0" layoutY="193.0" prefHeight="36.0" prefWidth="70.0" text="Montant:">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <TextField fx:id="montantField" layoutX="151.0" layoutY="199.0" />
+      <Label layoutX="330.0" layoutY="199.0" prefHeight="25.0" prefWidth="261.0" text="(Le montant ne doit pas dépasser 500 000 DHS)" textFill="RED">
+         <font>
+            <Font name="System Italic" size="12.0" />
+         </font>
+      </Label>
+      <Button layoutX="331.0" layoutY="397.0" mnemonicParsing="false" onAction="#Valider" prefHeight="44.0" prefWidth="109.0" text="Valider" />
+      <Label layoutX="492.0" layoutY="106.0" prefHeight="36.0" prefWidth="90.0" text="Fond Actuel :">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <Label fx:id="fondLabel" layoutX="611.0" layoutY="106.0" prefHeight="36.0" prefWidth="98.0" textFill="GREEN">
+         <font>
+            <Font size="13.0" />
+         </font>
+      </Label>
+      <Label fx:id="errorLabel" alignment="CENTER" layoutX="250.0" layoutY="533.0" prefHeight="25.0" prefWidth="287.0" textFill="RED" />
+      <Label fx:id="messageLabel" alignment="CENTER" layoutX="250.0" layoutY="533.0" prefHeight="25.0" prefWidth="287.0" textFill="GREEN" />
+   </children>
+</AnchorPane>
