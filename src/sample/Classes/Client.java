@@ -9,7 +9,7 @@ public class Client extends Personne{
     public Client(int numeroPersonne, String nomPersonne, String prenomPersonne, double salairePersonne, int agencePersonne, String dateRejointClient) {
         super(numeroPersonne, nomPersonne, prenomPersonne, salairePersonne, agencePersonne);
         this.dateRejointClient = dateRejointClient;
-
+        System.out.println("ldhljfhq");
     }
 
     public String getDateRejointClient() {
