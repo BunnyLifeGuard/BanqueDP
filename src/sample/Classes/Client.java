@@ -1,7 +1,5 @@
 package sample.Classes;
 
-import java.util.Date;
-
 public class Client extends Personne{
 
     private String dateRejointClient;
@@ -9,7 +7,6 @@ public class Client extends Personne{
     public Client(int numeroPersonne, String nomPersonne, String prenomPersonne, double salairePersonne, int agencePersonne, String dateRejointClient) {
         super(numeroPersonne, nomPersonne, prenomPersonne, salairePersonne, agencePersonne);
         this.dateRejointClient = dateRejointClient;
-        System.out.println("ldhljfhq");
     }
 
     public String getDateRejointClient() {
