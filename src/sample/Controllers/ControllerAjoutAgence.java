@@ -6,6 +6,7 @@ import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
+import sample.Controllers.Strategie.ValiderStrategie;
 
 import java.net.URL;
 import java.sql.Connection;
@@ -16,7 +17,7 @@ import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.ResourceBundle;
 
-public class ControllerAjoutAgence implements Initializable {
+public class ControllerAjoutAgence implements Initializable, ValiderStrategie {
 
     @FXML
     private TextField nomField, plafondField, numTelField;
