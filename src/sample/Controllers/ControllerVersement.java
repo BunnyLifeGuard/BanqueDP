@@ -28,7 +28,7 @@ public class ControllerVersement implements Initializable, TransactionStrategie 
     @FXML
     private TextField montantField;
     @FXML
-    private static TextField passwordField;
+    private TextField passwordField;
     @FXML
     private Button validerButton;
     static int numCompte = ControllerLogin.numCompte;
@@ -60,19 +60,7 @@ public class ControllerVersement implements Initializable, TransactionStrategie 
         }
     }
 
-    static {
-        try {
-            pst.setInt(1, numCompte);
-            pst.setString(2, passwordField.getText());
-            rs = pst.executeQuery();
-            if(rs.next()) {
-                Double solde = rs.getDouble("soldeClient");
 
-            }
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-    }
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
 

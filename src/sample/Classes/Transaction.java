@@ -8,6 +8,7 @@ public class Transaction {
     private String nom;
     private int numCompte;
     private Double montant;
+    private double solde;
 
     public Transaction(String nom, int numCompte, Double montant) {
         this.nom = nom;
@@ -50,7 +51,7 @@ public class Transaction {
 
     public void payer(TransactionStrategie methode) throws SQLException {
         Double montant = this.getMontant();
-        Double solde = Client.getSoldeClient();
+        Double solde = this.solde;
         methode.envoieArgent(montant, solde);
     }
 }
