@@ -6,7 +6,7 @@ public class Client {
     private int numCompte;
     private String nomClient;
     private String prenomClient;
-    private Double soldeClient;
+    private static Double soldeClient;
     private int agenceClient;
     private String dateRejointClient;
 
@@ -51,7 +51,7 @@ public class Client {
         this.prenomClient = prenomClient;
     }
 
-    public Double getSoldeClient() {
+    static public Double getSoldeClient() {
         return soldeClient;
     }
 

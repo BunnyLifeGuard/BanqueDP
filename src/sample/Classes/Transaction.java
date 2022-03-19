@@ -1,5 +1,9 @@
 package sample.Classes;
 
+import sample.Classes.Strategie.TransactionStrategie;
+
+import java.sql.SQLException;
+
 public class Transaction {
     private String nom;
     private int numCompte;
@@ -42,5 +46,11 @@ public class Transaction {
 
     public void setMontant(Double montant) {
         this.montant = montant;
+    }
+
+    public void payer(TransactionStrategie methode) throws SQLException {
+        Double montant = this.getMontant();
+        Double solde = Client.getSoldeClient();
+        methode.envoieArgent(montant, solde);
     }
 }

@@ -8,6 +8,7 @@ import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import sample.Classes.Agence;
 import sample.Classes.Fond;
+import sample.Controllers.Strategie.ValiderStrategie;
 
 import java.net.URL;
 import java.sql.Connection;
@@ -16,7 +17,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ResourceBundle;
 
-public class ControllerAccorderFonts implements Initializable {
+public class ControllerAccorderFonts implements Initializable, ValiderStrategie {
 
     public TableView<Fond> fondTable;
     public TableColumn<Fond, Integer> numField;
