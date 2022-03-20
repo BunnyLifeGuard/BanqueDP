@@ -5,8 +5,8 @@ import sample.Classes.Carte;
 public class Offre16Ans extends Offre {
 
     public Offre16Ans(Double prix, Double plafond) {
-        super.prix = prix;
-        super.plafond = plafond;
+        super.prix = 2d;
+        super.plafond = 500d;
     }
 
     @Override
