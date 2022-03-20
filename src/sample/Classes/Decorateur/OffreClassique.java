@@ -11,11 +11,11 @@ public class OffreClassique extends Offre {
 
     @Override
     public double getPrix() {
-        return 0;
+        return super.prix;
     }
 
     @Override
     public double getPlafond() {
-        return 0;
+        return super.plafond;
     }
 }

@@ -12,7 +12,7 @@ public class BonusCarteSim extends Bonus {
 
     @Override
     public double getPlafond() {
-        return 0;
+        return offre.getPlafond();
     }
 
 }
