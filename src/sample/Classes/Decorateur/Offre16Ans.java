@@ -10,12 +10,12 @@ public class Offre16Ans extends Offre {
     }
 
     @Override
-    double getPrix() {
+    public double getPrix() {
         return super.prix;
     }
 
     @Override
-    double getPlafond() {
+    public double getPlafond() {
         return super.plafond;
     }
 }
