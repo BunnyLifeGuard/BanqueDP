@@ -4,7 +4,7 @@ import sample.Classes.Carte;
 
 public class Offre16Ans extends Offre {
 
-    public Offre16Ans(Double prix, Double plafond) {
+    public Offre16Ans() {
         super.prix = 2d;
         super.plafond = 500d;
     }
