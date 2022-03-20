@@ -10,6 +10,8 @@ import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
 import sample.Classes.Client;
+import sample.Classes.Fabrique.AbstractObjectFactory;
+import sample.Classes.Fabrique.ObjectFactory;
 import sample.Classes.Transaction;
 
 import java.net.URL;
@@ -17,6 +19,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.ResourceBundle;
 
 public class ControllerListeClients implements Initializable {
@@ -34,6 +37,7 @@ public class ControllerListeClients implements Initializable {
     public TableColumn<Client, String> dateField;
     public ObservableList<Client> data;
     public Label errorLabel, messageLabel;
+    AbstractObjectFactory abstractObjectFactory = new ObjectFactory();
 
     private static Connection con;
     private static PreparedStatement pst, pst2, pst3, pst4, pst5;
@@ -78,8 +82,14 @@ public class ControllerListeClients implements Initializable {
                 rs2 = pst2.executeQuery();
                 data = FXCollections.observableArrayList();
                 while (rs2.next()) {
-                    Client client = new Client(rs2.getInt("numCompte"), rs2.getString("nomClient"), rs2.getString("prenomClient"),
-                    rs2.getDouble("soldeClient"), rs2.getInt("numAgence"), rs2.getString("dateCreationDuCompte"));
+                    ArrayList<String> attributes = new ArrayList<>();
+                    attributes.add(rs2.getInt("numCompte") + "");
+                    attributes.add(rs2.getString("nomClient"));
+                    attributes.add(rs2.getString("prenomClient"));
+                    attributes.add(rs2.getDouble("soldeClient") + "");
+                    attributes.add(rs2.getInt("numAgence") + "");
+                    attributes.add(rs2.getString("dateCreationDuCompte"));
+                    Client client = (Client) abstractObjectFactory.creerObjet("Client", attributes);
                     data.add(client);
                     clientsTable.setItems(data);
                 }
