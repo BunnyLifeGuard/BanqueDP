@@ -19,6 +19,11 @@ public class AffichageTaux implements Observateur{
     }
 
     public void afficher() {
-        System.out.println("Le taux du crédit a été changer de " + ancienTaux + " a " + tauxActuel);
+        if(tauxActuel != ancienTaux) {
+            System.out.println("Le taux du crédit a été changer de " + ancienTaux + " a " + tauxActuel);
+        }
+        else {
+            System.out.println("Le taux n'a pas changé");
+        }
     }
 }
